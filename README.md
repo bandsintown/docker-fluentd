@@ -95,15 +95,6 @@ See ["How to build your own image"](#how-to-build-your-own-image) section for
 more details.
 
 
-### `debian`
-
-The image based on [Debian Linux image][7].
-You may use this image when you require plugins which cannot be installed
-on Alpine (like `fluent-plugin-systemd`).
-
-
-
-
 ## How to build your own image
 
 You can build a customized image based on Fluentd's `onbuild` image.
@@ -146,7 +137,7 @@ To add plugins, edit `Dockerfile` as following:
 ##### Apline version
 
 ```Dockerfile
-FROM fluent/fluentd:onbuild
+FROM bandsintown/alpine:3.4
 
 USER root
 
@@ -168,36 +159,10 @@ USER fluent
 EXPOSE 24284
 ```
 
-##### Debian version
-
-```Dockerfile
-FROM fluent/fluentd:debian-onbuild
-
-USER root
-
-RUN buildDeps="sudo make gcc g++ libc-dev ruby-dev" \
- && apt-get update \
- && apt-get install -y --no-install-recommends $buildDeps \
-
- # cutomize following instruction as you wish
- && sudo -u fluent gem install \
-        fluent-plugin-elasticsearch \
-        fluent-plugin-record-reformer \
-
- && sudo -u fluent gem sources --clear-all \
- && SUDO_FORCE_REMOVE=yes \
-    apt-get purge -y --auto-remove \
-                  -o APT::AutoRemove::RecommendsImportant=false \
-                  $buildDeps \
- && rm -rf /var/lib/apt/lists/* \
-           /home/fluent/.gem/ruby/2.3.0/cache/*.gem
-
-USER fluent
-```
 
 ##### Note
 
-These example run `apk add`/`apt-get install` to be able to install
+These example run `apk add` to be able to install
 Fluentd plugins which require native extensions (they are removed immediately
 after plugin installation).  
 If you're sure that plugins don't include native extensions, you can omit it
