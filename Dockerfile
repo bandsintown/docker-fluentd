@@ -1,4 +1,4 @@
-FROM bandsintown/alpine:3.4
+FROM bandsintown/alpine:3.5
 MAINTAINER Bandsintown Devops Team "devops@bandsintown.com"
 
 # Do not split this into multiple RUN!
