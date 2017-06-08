@@ -1,0 +1,17 @@
+# This docker-compose yml describe the services to run locally
+version: '2'
+
+# Defines the services
+services:
+
+  # Test image (packages, services, scripts)
+  test-image:
+    image: bandsintown/fluentd-test:${VERSION}
+    command: bats /tests/image
+    environment:
+      - VERSION=${VERSION}
+      - CONSUL_ADDRESS=test-consul:8500
+
+    # We disable the log in order to increase lisibility in CI
+    logging:
+      driver: "none"
