@@ -1,4 +1,4 @@
-[![Build status](https://badge.buildkite.com/f78e045c0b561ba33f80f3c996ccfe89b49ade24b832f92bfd.svg)](https://buildkite.com/bandsintown/docker-alpine)
+[![Build status](https://badge.buildkite.com/fdf356197daece7a9d536168053e6febe422c2843b04a53222.svg)](https://buildkite.com/bandsintown/docker-fluentd)
 	
 
 # What is Fluentd?
