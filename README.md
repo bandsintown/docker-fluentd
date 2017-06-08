@@ -16,15 +16,15 @@ collection and consumption for a better use and understanding of data.
 To create endpoint that collects logs on your host just run:
 
 ```bash
-docker run -d -p 24224:24224 -v /data:/var/log/fluentd fluent/fluentd
+docker run -d -p 24224:24224 -v /data:/var/log/fluentd bandsintown/fluentd
 ```
 
 Default configurations are to:
 
 - listen port `24224` for Fluentd forward protocol
-- store logs with tag `docker.**` into `/fluentd/log/docker.*.log`
+- store logs with tag `docker.**` into `/var/log/fluentd/docker.*.log`
   (and symlink `docker.log`)
-- store all other logs into `/fluentd/log/data.*.log` (and symlink `data.log`)
+- store all other logs into `/var/log/fluentd/log/data.*.log` (and symlink `data.log`)
 
 
 
