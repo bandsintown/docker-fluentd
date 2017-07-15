@@ -10,7 +10,6 @@ services:
     command: bats /tests/image
     environment:
       - VERSION=${VERSION}
-      - CONSUL_ADDRESS=test-consul:8500
 
     # We disable the log in order to increase lisibility in CI
     logging:
