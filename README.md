@@ -1,6 +1,10 @@
-[![Build status](https://badge.buildkite.com/fdf356197daece7a9d536168053e6febe422c2843b04a53222.svg)](https://buildkite.com/bandsintown/docker-fluentd)
-	
+[![dockeri.co](http://dockeri.co/image/bandsintown/fluentd)](https://hub.docker.com/r/bandsintown/fluentd/)
 
+[![Build status](https://badge.buildkite.com/f78e045c0b561ba33f80f3c996ccfe89b49ade24b832f92bfd.svg)](https://buildkite.com/bandsintown/docker-fluentd)
+[![GitHub issues](https://img.shields.io/github/issues/bandsintown/docker-fluentd.svg "GitHub issues")](https://github.com/bandsintown/docker-fluentd)
+[![GitHub stars](https://img.shields.io/github/stars/bandsintown/docker-fluentd.svg "GitHub stars")](https://github.com/bandsintown/docker-fluentd)
+[![Docker layers](https://images.microbadger.com/badges/image/bandsintown/fluentd.svg)](http://microbadger.com/images/bandsintown/fluentd)
+	
 # What is Fluentd?
 
 Fluentd is an open source data collector, which lets you unify the data
