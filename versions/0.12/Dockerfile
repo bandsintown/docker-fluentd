@@ -1,7 +1,7 @@
 FROM bandsintown/alpine:3.5
 MAINTAINER Bandsintown Devops Team "devops@bandsintown.com"
 
-ENV FLUENTD_VERSION="0.12.32" FLUENTD_OPT="" FLUENTD_CONF="fluent.conf" LD_PRELOAD=""
+ENV FLUENTD_VERSION="0.12.41" FLUENTD_OPT="" FLUENTD_CONF="fluent.conf" LD_PRELOAD=""
 
 ADD rootfs /
 
